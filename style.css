@@ -3,15 +3,16 @@
                     body {
                         margin: 0;
                         padding: 0;
-                        background-color: rgb(19, 128, 145);
                         font-family: "Montserrat Alternates";
                     }
                     
                     #my-canvas {
-                        background-color: lightgrey;
+                        background-color: rgb(163, 154, 154);
                     }
                     
                     .first {
+                        height: 50 px;
+                        width: 50 px;
                         display: block;
                         margin: auto;
                         border: 5px solid;
@@ -22,6 +23,7 @@
                         display: flex;
                         flex-direction: column;
                         align-items: center;
+                        background-color: rgb(82, 145, 154);
                     }
                     
                     #start-btn,
