@@ -20,4 +20,6 @@ let game;
 goOnButton.addEventListener("click", () => {
     canvas.style.display = "block";
     splashScreen.style.display = "none";
+    game = new Game()
+    game.gameLoop()
 })
