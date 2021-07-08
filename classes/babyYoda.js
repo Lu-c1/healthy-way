@@ -14,10 +14,12 @@ class BabyYoda {
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
     }
 
-    moveYoda = () => {
-        this.x++;
 
-
+    moveYodaRight = () => {
+        x++;
+    }
+    moveYodaLeft = () => {
+        this.x--;
     }
 
 }
