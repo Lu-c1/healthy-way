@@ -1,14 +1,22 @@
 class Food {
-    constructor() {
-        this.x = canvas.width - canvas.width * 0.25;
-        this.y = 80;
+    constructor(kcal, health, srcURL, xPos) {
+        this.x = xPos;
+        this.y = 0;
         this.width = 30;
         this.height = 20;
-        this.speed = 1
-        this.image = new Image()
-        this.image.src = ["../images/rice.png"]
+        this.speed = 1.3;
+        this.image = new Image();
+        this.image.src = srcURL;
+        this.kcal = kcal;
+        this.health = health;
+    }
+    drawFood = () => {
+        ctx.drawImage(this.image, this.x, this.y, this.width, this.height)
+
     }
     foodGravity = () => {
-        this.y++;
+
+        this.y += this.speed
     }
+
 }

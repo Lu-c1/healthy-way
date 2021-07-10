@@ -10,6 +10,10 @@
                             background-color: lightgrey;
                         }
                         
+                        #splash-screen {
+                            height: 900px;
+                        }
+                        
                         .first {
                             height: 50 px;
                             width: 50 px;
@@ -33,6 +37,7 @@
                             padding: 20px;
                             font-size: 20px;
                             margin-top: 60px;
+                            margin-bottom: 90px;
                         }
                         
                         #my-canvas {

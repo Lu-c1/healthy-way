@@ -23,13 +23,18 @@ goOnButton.addEventListener("click", () => {
     game = new Game()
     game.gameLoop()
 })
-camvas.addEventListener("keydown", (event) => {
+window.addEventListener("keydown", (event) => {
+    console.log(event.key);
+
     switch (event.key) {
-        case "arrowLeft":
+
+        case "ArrowLeft":
             game.babyYoda.moveYodaLeft()
             break;
-        case "arrowRight":
+        case "ArrowRight":
             game.babyYoda.moveYodaRight()
             break;
     }
 })
+
+console.log(game) //give me fails
