@@ -19,27 +19,31 @@
 
         <!-- Splash screen -->
         <div id="splash-screen" class="container">
-            <img src="./images/healthy way logo.png" class="first" />
-            <br>
+            <img src="./images/ T.I.T.H.W.png" />
             <button id="start-btn">Go on!</button>
         </div>
 
         <!-- Canvas -->
-        <canvas id="my-canvas" width="1500 " height="900"></canvas>
-
+        <canvas id="my-canvas" width="1000" height="600"></canvas>
+        <div id="score">
+            <p>Score</p>
+            <p class="kcal">Kcal</p>
+            <p class="health">Health</p>
+        </div>
         <!-- Game over screen -->
-        <div id="gameover-screen" class="container ">
-            <img src="./images/babyyoda.png" class="yoda" />
+        <div id="gameover-screen" class="container">
+            <p><strong>You have to improve your diet</strong></p>
+            <img src="./images/babyyoda.png" />
             <button id="restart-btn">Play Again!</button>
         </div>
 
     </div>
 
+    <script src="./main.js"></script>
+    <script src="./classes/game.js"></script>
+    <script src="./classes/food.js"></script>
+    <script src="./classes/babyYoda.js"></script>
 
-    <script src="./main.js "></script>
-    <script src="./classes/game.js "></script>
-    <script src="./classes/food.js "></script>
-    <script src="./classes/babyYoda.js "></script>
 
 
 </body>

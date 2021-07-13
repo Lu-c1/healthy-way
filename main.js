@@ -10,9 +10,17 @@ let splashScreen = document.querySelector("#splash-screen")
 let gameoverScreen = document.querySelector("#gameover-screen")
 let goOnButton = document.querySelector("#start-btn")
 let playAgainButton = document.querySelector("#restart-btn")
+let totalScoreK = document.querySelector(".kcal")
+let totalScoreH = document.querySelector(".health")
+
+
+
 
 //main game global variable
 let game;
+let scoreKcalorias = 0;
+let scoreHealth = 0;
+
 
 // ADD EVENT LISTENERS
 
@@ -24,7 +32,6 @@ goOnButton.addEventListener("click", () => {
     game.gameLoop()
 })
 window.addEventListener("keydown", (event) => {
-    console.log(event.key);
 
     switch (event.key) {
 
@@ -37,4 +44,9 @@ window.addEventListener("keydown", (event) => {
     }
 })
 
-console.log(game) //give me fails
+playAgainButton.addEventListener("click", () => {
+    gameoverScreen.style.display = "none";
+    canvas.style.display = "block";
+    game = new Game()
+    game.gameLoop()
+})
