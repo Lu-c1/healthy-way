@@ -3,8 +3,8 @@ class BabyYoda {
         this.x = canvas.width * 0.40;
         this.y = canvas.height - 80;
         this.speed = 1;
-        this.width = 60;
-        this.height = 60;
+        this.width = 70;
+        this.height = 70;
         this.img = new Image()
         this.img.src = "../images/babyyoda.png"
 

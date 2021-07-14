@@ -1,80 +1,97 @@
-                        @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400&display=swap");
-                        html,
-                        body {
-                            margin: 0;
-                            padding: 0;
-                            font-family: "Montserrat Alternates";
-                            background-color: rgb(82, 145, 154);
-                        }
-                        
-                        #my-canvas {
-                            background-color: lightgrey;
-                        }
-                        
-                        #splash-screen {
-                            display: flex;
-                            flex-direction: column;
-                            flex-wrap: wrap;
-                            align-items: center;
-                        }
-                        
-                        #splash-screen img {
-                            height: 40em;
-                        }
-                        
-                        .container {
-                            display: flex;
-                            color: rgb(57, 17, 83);
-                            flex-direction: column;
-                            align-items: center;
-                        }
-                        
-                        #start-btn {
-                            background-color: #a43f34;
-                            color: white;
-                            font-family: "Montserrat Alternates";
-                            width: 170x;
-                            padding: 20px;
-                            font-size: 20px;
-                            margin-top: 60px;
-                            margin-bottom: 90px;
-                        }
-                        
-                        #restart-btn {
-                            background-color: #a43f34;
-                            color: white;
-                            font-family: "Montserrat Alternates";
-                            width: 170x;
-                            padding: 20px;
-                            font-size: 20px;
-                            margin-top: 60px;
-                            margin-bottom: 90px;
-                        }
-                        
-                        #score {
-                            background-color: rgb(57, 17, 83);
-                            color: white;
-                            font-family: "Montserrat Alternates";
-                            height: 150px;
-                            width: 270px;
-                            padding: 10px;
-                            font-size: 20px;
-                            margin-top: 20px;
-                            margin-bottom: 20px;
-                            border: 5px solid #501955;
-                        }
-                        
-                        #gameover-screen img {
-                            height: 10em;
-                            width: 40 px;
-                            border: 5px solid #1b5519;
-                            background-color: rgb(57, 17, 83);
-                        }
-                        
-                        #my-canvas {
-                            display: none
-                        }
-                        
-                        #gameover-screen {
-                            display: none
-                        }
+                            @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400&display=swap");
+                            html,
+                            body {
+                                margin: 0;
+                                padding: 0;
+                                font-family: "Montserrat Alternates";
+                                background-color: rgb(82, 145, 154);
+                            }
+                            
+                            #my-canvas {
+                                background-color: lightgrey;
+                            }
+                            
+                            #splash-screen {
+                                display: flex;
+                                flex-direction: column;
+                                text-align: center;
+                            }
+                            
+                            #splash-screen img {
+                                height: 30em;
+                            }
+                            
+                            .text {
+                                flex-wrap: wrap;
+                                margin-left: 650px;
+                                margin-right: 650px;
+                                justify-content: center;
+                                color: rgb(57, 17, 83);
+                                font-weight: 900;
+                            }
+                            
+                            .container {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            
+                            #start-btn {
+                                background-color: #a43f34;
+                                color: white;
+                                font-family: "Montserrat Alternates";
+                                width: 170x;
+                                padding: 20px;
+                                font-size: 20px;
+                                margin-top: 15px;
+                                margin-bottom: 15px;
+                            }
+                            
+                            #restart-btn {
+                                background-color: #a43f34;
+                                color: white;
+                                font-family: "Montserrat Alternates";
+                                width: 170x;
+                                padding: 20px;
+                                font-size: 20px;
+                                margin-top: 60px;
+                                margin-bottom: 90px;
+                            }
+                            
+                            #score {
+                                background-color: rgb(57, 17, 83);
+                                color: white;
+                                font-family: "Montserrat Alternates";
+                                height: 150px;
+                                width: 270px;
+                                padding: 10px;
+                                font-size: 20px;
+                                margin-top: 50px;
+                                margin-bottom: 20px;
+                                border: 5px solid #501955;
+                            }
+                            
+                            #gameover-screen img {
+                                height: 10em;
+                                width: 40 px;
+                                margin-top: 100px;
+                                margin-bottom: 20px;
+                                border: 5px solid #501955;
+                                background-color: rgb(57, 17, 83);
+                            }
+                            
+                            #my-canvas {
+                                display: none
+                            }
+                            
+                            #gameover-screen {
+                                display: none
+                            }
+                            
+                            #win-screen {
+                                display: none
+                            }
+                            
+                            #score {
+                                display: none
+                            }

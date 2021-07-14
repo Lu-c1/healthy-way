@@ -8,8 +8,10 @@ let ctx = canvas.getContext("2d")
 //DOM elements
 let splashScreen = document.querySelector("#splash-screen")
 let gameoverScreen = document.querySelector("#gameover-screen")
+let winScreen = document.querySelector("#win-screen")
 let goOnButton = document.querySelector("#start-btn")
 let playAgainButton = document.querySelector("#restart-btn")
+let scorePannel = document.querySelector("#score")
 let totalScoreK = document.querySelector(".kcal")
 let totalScoreH = document.querySelector(".health")
 
@@ -18,8 +20,7 @@ let totalScoreH = document.querySelector(".health")
 
 //main game global variable
 let game;
-let scoreKcalorias = 0;
-let scoreHealth = 0;
+
 
 
 // ADD EVENT LISTENERS
@@ -27,10 +28,12 @@ let scoreHealth = 0;
 
 goOnButton.addEventListener("click", () => {
     canvas.style.display = "block";
+    scorePannel.style.display = "block";
     splashScreen.style.display = "none";
     game = new Game()
     game.gameLoop()
 })
+
 window.addEventListener("keydown", (event) => {
 
     switch (event.key) {
@@ -46,7 +49,10 @@ window.addEventListener("keydown", (event) => {
 
 playAgainButton.addEventListener("click", () => {
     gameoverScreen.style.display = "none";
+    winScreen.style.display = "none";
     canvas.style.display = "block";
     game = new Game()
+    totalScoreH.innerHTML = 'Kcal: 0'
+    totalScoreK.innerHTML = 'Health: 0'
     game.gameLoop()
 })

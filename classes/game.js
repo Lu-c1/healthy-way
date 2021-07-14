@@ -8,25 +8,27 @@ class Game {
         this.isGameOver = false;
         this.health = 0;
         this.kcal = 0;
+        this.scoreKcalorias = 0;
+        this.scoreHealth = 0;
     }
 
 
     generateFood = () => {
 
         if (!this.food.length || this.food[this.food.length - 1].y >= canvas.height * 0.3) { //it´s not reading the rest of conditionals because of y. property
-            let xPos = Math.floor(Math.random() * canvas.width * 0.70)
+            let xPos = Math.floor(Math.random() * canvas.width)
             let foodSuperHealthy = new Food(60, 2, "../images/broccoli.png", xPos);
             this.food.push(foodSuperHealthy)
 
-            let xPos2 = Math.floor(Math.random() * canvas.width * 0.70)
+            let xPos2 = Math.floor(Math.random() * canvas.width)
             let foodHealthy = new Food(180, 1, "../images/eggs.png", xPos2);
             this.food.push(foodHealthy);
 
-            let xPos3 = Math.floor(Math.random() * canvas.width * 0.70)
+            let xPos3 = Math.floor(Math.random() * canvas.width)
             let foodUnHealthy = new Food(300, -1, "../images/bacon.png", xPos3);
             this.food.push(foodUnHealthy)
 
-            let xPos4 = Math.floor(Math.random() * canvas.width * 0.70)
+            let xPos4 = Math.floor(Math.random() * canvas.width)
             let foodAbsuluteUnHealthy = new Food(400, -2, "../images/pizza.png", xPos4);
             this.food.push(foodAbsuluteUnHealthy)
         }
@@ -37,11 +39,14 @@ class Game {
         gameoverScreen.style.display = "flex"
     }
 
-
+    winGame = () => {
+        canvas.style.display = "none"
+        winScreen.style.display = "flex"
+    }
 
     gameLoop = () => {
-
-        //clear
+        console.log("game running")
+            //clear
         ctx.clearRect(0, 0, canvas.width, canvas.height)
             //Move elements or other actions. Any function in loop is someth
         this.generateFood()
@@ -54,16 +59,12 @@ class Game {
             if (this.babyYoda.foodYodaCollision(eachfood)) {
 
                 this.food.splice(index, 1);
-                scoreKcalorias += eachfood.kcal;
-                scoreHealth += eachfood.health;
+                this.scoreKcalorias += eachfood.kcal;
+                this.scoreHealth += eachfood.health;
 
-                totalScoreK.innerHTML = ('Kcal: ' + scoreKcalorias);
-                totalScoreH.innerHTML = ('Health: ' + scoreHealth);
+                totalScoreK.innerHTML = ('Kcal: ' + this.scoreKcalorias);
+                totalScoreH.innerHTML = ('Health: ' + this.scoreHealth);
 
-            }
-            if (scoreKcalorias > 1500 && scoreHealth < 15) {
-                this.isGameOver = true;
-                this.gameOver();
             }
 
 
@@ -76,6 +77,17 @@ class Game {
         this.food.forEach(eachfood => {
             eachfood.drawFood()
         })
+
+        if (this.scoreKcalorias >= 1500 && this.scoreHealth >= 15) {
+
+            this.isGameOver = true;
+            this.winGame()
+        } else if (this.scoreKcalorias > 1500 && this.scoreHealth < 15) {
+
+            this.isGameOver = true;
+            this.gameOver()
+        }
+
 
 
         //request animation
