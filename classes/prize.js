@@ -5,7 +5,7 @@ class Prize {
         this.width = 90;
         this.height = 60;
         this.img = new Image()
-        this.img.src = "../images/prize.png"
+        this.img.src = "./images/prize.png"
     }
     drawPrize = () => {
 
