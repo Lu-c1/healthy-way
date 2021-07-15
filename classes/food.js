@@ -1,10 +1,10 @@
 class Food {
-    constructor(kcal, health, srcURL, xPos) {
+    constructor(kcal, health, srcURL, xPos, yPos) {
         this.x = xPos;
-        this.y = 0;
-        this.width = 35;
-        this.height = 25;
-        this.speed = 1.3;
+        this.y = yPos;
+        this.width = 40;
+        this.height = 30;
+        this.speed = 1.4;
         this.image = new Image();
         this.image.src = srcURL;
         this.kcal = kcal;

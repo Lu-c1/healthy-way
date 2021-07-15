@@ -11,10 +11,11 @@ let gameoverScreen = document.querySelector("#gameover-screen")
 let winScreen = document.querySelector("#win-screen")
 let goOnButton = document.querySelector("#start-btn")
 let playAgainButton = document.querySelector("#restart-btn")
+let playAgainButtonWin = document.querySelector("#restart-btn2")
 let scorePannel = document.querySelector("#score")
 let totalScoreK = document.querySelector(".kcal")
 let totalScoreH = document.querySelector(".health")
-console.log(playAgainButton)
+
 
 
 
@@ -48,11 +49,18 @@ window.addEventListener("keydown", (event) => {
 })
 
 playAgainButton.addEventListener("click", () => {
-    console.log(playAgainButton)
-    console.log("click")
-    winScreen.style.display = "none";
     gameoverScreen.style.display = "none";
     canvas.style.display = "block";
     game = new Game()
+    totalScoreK.innerHTML = ('Kcal: ');
+    totalScoreH.innerHTML = ('Health: ');
+    game.gameLoop()
+})
+playAgainButtonWin.addEventListener("click", () => {
+    winScreen.style.display = "none";;
+    canvas.style.display = "block";
+    game = new Game()
+    totalScoreK.innerHTML = ('Kcal: ');
+    totalScoreH.innerHTML = ('Health: ');
     game.gameLoop()
 })

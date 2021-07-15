@@ -1,13 +1,13 @@
 THIS IS THE HEALTHY WAY
 
 In This world we live in, everything revolves around Mathematics. Also what we eat and how it makes us grow or gives us health.
-Baby Yoda is the force that will collect what you need to reach the perfect diet (35% CH, 15% Proteins and 30% fat).The game ends when you overpass your energy requirements. If you did it with the correct points of health, you win, if your health is not good, you willg lose the game. 
+Baby Yoda is the force that will collect what you need to reach the perfect diet (35% CH, 15% Proteins and 30% fat).The game ends when you overpass your energy requirements. If you did it with the correct points of health, you win, if your health is not good, you will lose the game. 
 
 
 MPV (DOM-CANVAS)
-1.- The Game has 4 food items that will will randomly drop from the top of the canvas.
+1.- The Game has 4 food items that will randomly drop from the top of the canvas.
 2.- Baby Yoda will move horizontally
-3.- each food will have its properties to add to the final score.
+3.- Each food will have its properties to add to the final score.
 
 
 DATA STRUCTURE

@@ -16,10 +16,15 @@ class BabyYoda {
 
 
     moveYodaRight = () => {
-        this.x += 10;
+        if (this.x < canvas.width - this.width) {
+            this.x += 10;
+        }
+
     }
     moveYodaLeft = () => {
-        this.x -= 10;
+        if (this.x > 0) {
+            this.x -= 10;
+        }
     }
 
     foodYodaCollision = (food) => {

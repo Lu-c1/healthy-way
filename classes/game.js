@@ -2,11 +2,9 @@ class Game {
     constructor() {
         this.bg = new Image();
         this.bg.src = "./images/bg.png"
-            //this.prize = new Prize();
         this.babyYoda = new BabyYoda()
         this.food = [];
         this.isGameOver = false;
-        //this.win = false;
         this.health = 0;
         this.kcal = 0;
         this.scoreKcalorias = 0;
@@ -16,50 +14,43 @@ class Game {
 
     generateFood = () => {
 
-        if (!this.food.length || this.food[this.food.length - 1].y >= canvas.height * 0.3) { //it´s not reading the rest of conditionals because of y. property
+        if (!this.food.length || this.food[this.food.length - 1].y >= canvas.height * 0.2) {
             let xPos = Math.floor(Math.random() * canvas.width)
-            let foodSuperHealthy = new Food(60, 2, "./images/broccoli.png", xPos);
+            let yPos = Math.floor(Math.random() * -300)
+            let foodSuperHealthy = new Food(60, 2, "./images/broccoli.png", xPos, yPos);
             this.food.push(foodSuperHealthy)
 
             let xPos2 = Math.floor(Math.random() * canvas.width)
-            let foodHealthy = new Food(180, 1, "./images/eggs.png", xPos2);
+            let yPos2 = Math.floor(Math.random() * -300)
+            let foodHealthy = new Food(180, 1, "./images/eggs.png", xPos2, yPos2);
             this.food.push(foodHealthy);
 
             let xPos3 = Math.floor(Math.random() * canvas.width)
-            let foodUnHealthy = new Food(300, -1, "./images/bacon.png", xPos3);
+            let yPos3 = Math.floor(Math.random() * -300)
+            let foodUnHealthy = new Food(300, -1, "./images/bacon.png", xPos3, yPos3);
             this.food.push(foodUnHealthy)
 
             let xPos4 = Math.floor(Math.random() * canvas.width)
-            let foodAbsuluteUnHealthy = new Food(400, -2, "./images/pizza.png", xPos4);
-            this.food.push(foodAbsuluteUnHealthy)
+            let yPos4 = Math.floor(Math.random() * -300)
+            let foodAbsoluteUnHealthy = new Food(400, -2, "./images/pizza.png", xPos4, yPos4);
+            this.food.push(foodAbsoluteUnHealthy)
         }
     }
 
     gameOver = () => {
-        console.log("Game lost")
+
         canvas.style.display = "none"
         gameoverScreen.style.display = "flex"
     }
 
     winGame = () => {
-        console.log("game won")
-        playAgainButton = document.querySelector("#restart-btn")
-        console.log(playAgainButton)
         canvas.style.display = "none"
         winScreen.style.display = "flex"
-        playAgainButton.addEventListener("click", () => {
-            console.log(playAgainButton)
-            console.log("click")
-            winScreen.style.display = "none";
-            gameoverScreen.style.display = "none";
-            canvas.style.display = "block";
-            game = new Game()
-            game.gameLoop()
-        })
+
     }
 
     gameLoop = () => {
-        // console.log("game running")
+
         //clear
         ctx.clearRect(0, 0, canvas.width, canvas.height)
             //Move elements or other actions. Any function in loop is someth
@@ -102,7 +93,7 @@ class Game {
             this.gameOver()
         }
 
-        console.log(this.isGameOver)
+
 
         //request animation
         if (!this.isGameOver)
