@@ -83,11 +83,11 @@ class Game {
             eachfood.drawFood()
         })
 
-        if (this.scoreKcalorias >= 500 && this.scoreHealth >= 5) {
+        if (this.scoreKcalorias >= 1500 && this.scoreHealth >= 15) {
 
             this.isGameOver = true;
             this.winGame()
-        } else if (this.scoreKcalorias >= 500 && this.scoreHealth < 5) {
+        } else if (this.scoreKcalorias >= 1500 && this.scoreHealth < 15) {
 
             this.isGameOver = true;
             this.gameOver()
