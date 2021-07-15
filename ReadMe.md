@@ -1,14 +1,14 @@
-HEALTHY WAY
+THIS IS THE HEALTHY WAY
 
 In This world we live, all is about Mathmatics. Also what we eat and how it make us growth or provide health.
-Baby Yoda is the force that will collect the necessary for you to reach the perfect diet. It will take the food to complete the perfect diet (35% CH, 15% Proteins and 30% fat).The game ends when you reach the energy according to your needs in the perfect percentage with points of health, you loose when you have not health anymore or you have overpassed the energy you need.
+Baby Yoda is the force that will collect the necessary for you to reach the perfect diet. It will take the food to complete it properly (35% CH, 15% Proteins and 30% fat).The game ends when you overpass your energy requirements. If you did it with the correct points of health, you win, if your health is not good, you lose the game. 
 
 
 MPV (DOM-CANVAS)
-1.- Game has 16 foods that will fall randomized from the top of the canvas
+1.- Game has 4 kinds of food that will fall randomized from the top of the canvas
 2.- Baby Yoda will move horizontally
-3.- each food will hava a properties to sum to the final score, if you do it properly you obtain a prize.
-4.- speed of baby yoda will be increasing
+3.- each food will have its properties to sum to the final score.
+
 
 DATA STRUCTURE
 
@@ -16,22 +16,21 @@ MAIN JS.
 - create splashScreen ()
 - create canvas ()
 - create gameOverScreen ()
+- create winScreen ()
 
 GAME JS.
 - Game ()
-- StartLoop ()
+- gameLoop ()
 - checkCollisions ()
 - clearCanvas ()
 - updateCanvas ()
 - drawCanvas ()
 - GameOver ()
+- winGame ()
 
 FOOD JS.
 
 - Class Food () {}
-- Subclass Proteins (){}
-- Subclass Carbohidrates (){}
-- Subclass Fats (){}
 - draw () {}
 - move (){}
 - collision () {}
@@ -43,19 +42,18 @@ BABY_YODA JS.
 - move (){}
 - collision (){}
 
-PRIZE JS.
-- price (){}
-- draw (){}
 
 STATES AND STATE TRANSITIONS
 - splashScreen
 - gameScreen
 - gameOverScreen
+- winScreen
 
 TASKS
 - main build splashScreen
 - main build gameScreen
 - main build gameOverScreen
+- main build winScreengit
 - main addEventListener
 - game build the canvas 
 - gameLoop
