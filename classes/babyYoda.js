@@ -6,7 +6,7 @@ class BabyYoda {
         this.width = 70;
         this.height = 70;
         this.img = new Image()
-        this.img.src = "../images/babyyoda.png"
+        this.img.src = "./images/babyyoda.png"
 
     }
     drawYoda = () => {

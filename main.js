@@ -14,7 +14,7 @@ let playAgainButton = document.querySelector("#restart-btn")
 let scorePannel = document.querySelector("#score")
 let totalScoreK = document.querySelector(".kcal")
 let totalScoreH = document.querySelector(".health")
-
+console.log(playAgainButton)
 
 
 
@@ -48,22 +48,11 @@ window.addEventListener("keydown", (event) => {
 })
 
 playAgainButton.addEventListener("click", () => {
-
-    if (game.win) {
-        winScreen.style.display = "none";
-
-
-        canvas.style.display = "block";
-        game = new Game()
-        game.gameLoop()
-
-    }
-    if (!game.win) {
-        gameoverScreen.style.display = "none";
-        canvas.style.display = "block";
-        game = new Game()
-        game.gameLoop()
-
-    }
-
+    console.log(playAgainButton)
+    console.log("click")
+    winScreen.style.display = "none";
+    gameoverScreen.style.display = "none";
+    canvas.style.display = "block";
+    game = new Game()
+    game.gameLoop()
 })

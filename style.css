@@ -27,7 +27,7 @@
                                 height: 30em;
                                 display: block;
                                 margin: auto;
-                                margin-top: 50px;
+                                margin-top: 20px;
                                 margin-left: -40px;
                             }
                             
@@ -35,7 +35,7 @@
                                 height: 18em;
                                 display: block;
                                 margin: auto;
-                                margin-top: -50px;
+                                margin-top: -80px;
                             }
                             
                             .text {
@@ -43,6 +43,7 @@
                                 justify-content: center;
                                 color: rgb(57, 17, 83);
                                 font-weight: 900;
+                                font-size: 17px;
                             }
                             
                             #start-btn {
@@ -52,7 +53,7 @@
                                 width: 170x;
                                 padding: 20px;
                                 font-size: 20px;
-                                margin-top: 15px;
+                                margin-top: 10px;
                                 margin-bottom: 15px;
                             }
                             
@@ -71,13 +72,14 @@
                                 background-color: rgb(57, 17, 83);
                                 color: white;
                                 font-family: "Montserrat Alternates";
-                                height: 150px;
-                                width: 270px;
-                                padding: 10px;
+                                height: 130px;
+                                width: 250px;
+                                padding: 5px;
                                 font-size: 20px;
-                                margin-top: 50px;
+                                margin-top: 30px;
                                 margin-bottom: 20px;
                                 border: 5px solid #501955;
+                                text-align: center;
                             }
                             
                             #gameover-screen img {
