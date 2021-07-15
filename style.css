@@ -7,6 +7,12 @@
                                 background-color: rgb(82, 145, 154);
                             }
                             
+                            .container {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            
                             #my-canvas {
                                 background-color: lightgrey;
                             }
@@ -14,26 +20,29 @@
                             #splash-screen {
                                 display: flex;
                                 flex-direction: column;
-                                text-align: center;
+                                align-items: center;
                             }
                             
-                            #splash-screen img {
+                            .title {
                                 height: 30em;
+                                display: block;
+                                margin: auto;
+                                margin-top: 50px;
+                                margin-left: -40px;
+                            }
+                            
+                            .instructions {
+                                height: 18em;
+                                display: block;
+                                margin: auto;
+                                margin-top: -50px;
                             }
                             
                             .text {
-                                flex-wrap: wrap;
-                                margin-left: 650px;
-                                margin-right: 650px;
+                                display: flex;
                                 justify-content: center;
                                 color: rgb(57, 17, 83);
                                 font-weight: 900;
-                            }
-                            
-                            .container {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
                             }
                             
                             #start-btn {

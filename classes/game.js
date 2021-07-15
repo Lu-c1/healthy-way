@@ -6,6 +6,7 @@ class Game {
         this.babyYoda = new BabyYoda()
         this.food = [];
         this.isGameOver = false;
+        this.win = false;
         this.health = 0;
         this.kcal = 0;
         this.scoreKcalorias = 0;
@@ -35,11 +36,13 @@ class Game {
     }
 
     gameOver = () => {
+
         canvas.style.display = "none"
         gameoverScreen.style.display = "flex"
     }
 
     winGame = () => {
+        this.win = true;
         canvas.style.display = "none"
         winScreen.style.display = "flex"
     }
@@ -82,7 +85,9 @@ class Game {
 
             this.isGameOver = true;
             this.winGame()
-        } else if (this.scoreKcalorias > 1500 && this.scoreHealth < 15) {
+        }
+
+        if (this.scoreKcalorias > 1500 && this.scoreHealth < 15) {
 
             this.isGameOver = true;
             this.gameOver()

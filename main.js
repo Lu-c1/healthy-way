@@ -48,11 +48,22 @@ window.addEventListener("keydown", (event) => {
 })
 
 playAgainButton.addEventListener("click", () => {
-    gameoverScreen.style.display = "none";
-    winScreen.style.display = "none";
-    canvas.style.display = "block";
-    game = new Game()
-    totalScoreH.innerHTML = 'Kcal: 0'
-    totalScoreK.innerHTML = 'Health: 0'
-    game.gameLoop()
+
+    if (game.win) {
+        winScreen.style.display = "none";
+
+
+        canvas.style.display = "block";
+        game = new Game()
+        game.gameLoop()
+
+    }
+    if (!game.win) {
+        gameoverScreen.style.display = "none";
+        canvas.style.display = "block";
+        game = new Game()
+        game.gameLoop()
+
+    }
+
 })

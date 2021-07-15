@@ -19,18 +19,12 @@
 
         <!-- Splash screen -->
         <div id="splash-screen" class="container">
-            <div class="img container">
-                <img src="./images/T.H.W.png" />
-            </div>
-            <div class="text">
-                <p> This game has two goals. You have to reach, a number of Kcal and points of health….., but Hey!, you cannot sum Kcal without summing health.</p>
-                <p> There are foods that sum health and another ones that rest it. Don´t get to 1500 Kcal without at least 15 points of health, or you will lose. </p>
-                <p>Good Luck!!!</p>
+            <div>
+                <img class="title" src="./images/T.H.W.png" />
+                <img class="instructions" src="./images/intructions.png" />
             </div>
             <button id="start-btn">Go on!</button>
         </div>
-
-
 
         <!-- Canvas -->
         <canvas id="my-canvas" width="1000" height="600"></canvas>
@@ -39,6 +33,7 @@
             <p class="kcal">Kcal</p>
             <p class="health">Health</p>
         </div>
+
         <!-- Game over screen -->
         <div id="gameover-screen" class="container">
             <br>
@@ -48,7 +43,7 @@
             <button id="restart-btn">Play Again!</button>
         </div>
 
-        <!-- Congratulations screen -->
+        <!-- win-screen -->
         <div id="win-screen" class="container">
             <br>
             <p class="text">Congratulations!!
