@@ -1,8 +1,8 @@
 class BabyYoda {
     constructor() {
-        this.x = canvas.width * 0.40;
+        this.x = canvas.width / 2;
         this.y = canvas.height - 80;
-        this.speed = 1;
+        this.speed = 2;
         this.width = 70;
         this.height = 70;
         this.img = new Image()

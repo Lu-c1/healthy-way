@@ -62,14 +62,25 @@ class Game {
         this.food.forEach((eachfood, index) => {
 
             if (this.babyYoda.foodYodaCollision(eachfood)) {
-
+                this.food.speed += 10;
                 this.food.splice(index, 1);
                 this.scoreKcalorias += eachfood.kcal;
                 this.scoreHealth += eachfood.health;
 
+
                 totalScoreK.innerHTML = ('Kcal: ' + this.scoreKcalorias);
                 totalScoreH.innerHTML = ('Health: ' + this.scoreHealth);
 
+                if (eachfood.health < 0) {
+
+                    this.babyYoda.width += 3;
+                    this.babyYoda.speed -= 3;
+                } else if (eachfood.health > 0) {
+
+                    this.babyYoda.speed += 50;
+                    this.babyYoda.width -= 0.5;
+                    this.babyYoda.height += 0.5;
+                }
             }
 
 
