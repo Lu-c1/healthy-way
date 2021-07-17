@@ -32,7 +32,9 @@ goOnButton.addEventListener("click", () => {
     scorePannel.style.display = "block";
     splashScreen.style.display = "none";
     game = new Game()
+    game.audio.play()
     game.gameLoop()
+
 })
 
 window.addEventListener("keydown", (event) => {
@@ -52,6 +54,7 @@ playAgainButton.addEventListener("click", () => {
     gameoverScreen.style.display = "none";
     canvas.style.display = "block";
     game = new Game()
+    game.audio.play()
     totalScoreK.innerHTML = ('Kcal: ');
     totalScoreH.innerHTML = ('Health: ');
     game.gameLoop()
@@ -60,6 +63,7 @@ playAgainButtonWin.addEventListener("click", () => {
     winScreen.style.display = "none";;
     canvas.style.display = "block";
     game = new Game()
+    game.audio.play()
     totalScoreK.innerHTML = ('Kcal: ');
     totalScoreH.innerHTML = ('Health: ');
     game.gameLoop()

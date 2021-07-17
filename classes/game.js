@@ -9,6 +9,9 @@ class Game {
         this.kcal = 0;
         this.scoreKcalorias = 0;
         this.scoreHealth = 0;
+        this.audio = new Audio()
+        this.audio.src = "./music/starwars.mp3"
+        this.audio.volume = 0.04;
     }
 
 
@@ -41,11 +44,13 @@ class Game {
 
         canvas.style.display = "none"
         gameoverScreen.style.display = "flex"
+        this.audio.pause()
     }
 
     winGame = () => {
         canvas.style.display = "none"
         winScreen.style.display = "flex"
+        this.audio.pause()
 
     }
 
@@ -62,7 +67,7 @@ class Game {
         this.food.forEach((eachfood, index) => {
 
             if (this.babyYoda.foodYodaCollision(eachfood)) {
-                this.food.speed += 10;
+
                 this.food.splice(index, 1);
                 this.scoreKcalorias += eachfood.kcal;
                 this.scoreHealth += eachfood.health;
@@ -74,10 +79,10 @@ class Game {
                 if (eachfood.health < 0) {
 
                     this.babyYoda.width += 3;
-                    this.babyYoda.speed -= 3;
+                    this.babyYoda.speed -= 5;
                 } else if (eachfood.health > 0) {
 
-                    this.babyYoda.speed += 50;
+                    this.babyYoda.speed += 5;
                     this.babyYoda.width -= 0.5;
                     this.babyYoda.height += 0.5;
                 }
