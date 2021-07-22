@@ -10,8 +10,8 @@ class Game {
         this.scoreKcalorias = 0;
         this.scoreHealth = 0;
         this.audio = new Audio()
-        this.audio.src = "./music/starwars.mp3"
-        this.audio.volume = 0.04;
+        this.audio.src = "./music/starwarsedit.mp3got"
+        this.audio.volume = 0.06;
     }
 
 
